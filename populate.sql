@@ -53,3 +53,27 @@ INSERT INTO Spendings(customer_id, product_barcode, spent_money)
 VALUES('965', 'GLD092000',  200);
 INSERT INTO Spendings(customer_id, product_barcode, spent_money)
 VALUES('6177', 'KD5233121', 60);
+
+-- Заповнення таблиці Rating
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('KD5233121', 1999, 1);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('PL3528521', 1997, 2);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('TB0128413', 1999, 2);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('KD5233121', 1991, 3);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('GLD092000', 1997, 1);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('PL3528521', 1996, 2);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('CH1558061', 1999, 3);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('TB0128413', 1997, 4);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('GLD092000', 1998,  7);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('CH1558061', 1996, 4);
+INSERT INTO Rating(product_barcode, competition_year, product_position)
+VALUES('PL3223001', 1998, 2);
