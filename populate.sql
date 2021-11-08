@@ -1,79 +1,37 @@
 -- Заповнення таблиці Customers
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('5524', TO_DATE('1957-08-14', 'yyyy-mm-dd'), 58138);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('2174', TO_DATE('1954-03-07', 'yyyy-mm-dd'), 46344);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('4141', TO_DATE('1965-06-22', 'yyyy-mm-dd'), 71613);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('6182', TO_DATE('1984-01-01', 'yyyy-mm-dd'), 26646);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('5324', TO_DATE('1981-11-13', 'yyyy-mm-dd'), 58293);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('7446', TO_DATE('1967-09-30', 'yyyy-mm-dd'), 62513);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('965',  TO_DATE('1971-05-10', 'yyyy-mm-dd'), 55635);
-INSERT INTO Customers(customer_id, customer_bdate, customer_income)
-VALUES('6177', TO_DATE('1985-02-07', 'yyyy-mm-dd'), 33454);
-
+INSERT INTO Customers
+VALUES ('STEAM_0:0:9773688', 'hubabubt',     'CKarapjo02'),
+	   ('STEAM_0:0:2708101', 'zoryana2019',  'I_m_m_o_r_t99_a_L'),
+	   ('STEAM_0:0:9813809', 'henrey_old',   '((QwErTy12))'),
+	   ('STEAM_0:0:2858723', 'nosacostra2',  'dPX9R3cr25'),
+	   ('STEAM_0:0:5230065', 'geogrygubma',  'fsd#J23ja0_f9'),
+	   ('STEAM_0:0:6823432', 'antonkira212', 'XTR_BTR_02'),
+	   ('STEAM_0:0:7112050', 'Doze0Maar',    'Ubeyte24151'),
+	   ('STEAM_0:0:1934673', 'mErKaVa979',   '12motD6f');
 
 -- Заповнення таблиці Products
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('CH1558061', 'Pavillon Blanc du Ch Margaux Bordeauх Blanc 2006',  99);
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('KD5233121', 'Apple Golden Ukraine',  29.99);
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('PL3223001', 'Kolbasa Doctorskaya',   44.99);
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('PL3528521', 'Salmon fillet GRAVLAX', 69.99);
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('TB0128413', 'Toblerone Raisins',     34.79);
-INSERT INTO Products(product_barcode, product_name, product_price)
-VALUES('GLD092000', 'Ring W 0187 585',       149.99);
+INSERT INTO Products
+VALUES (0001, 'EdgeHud',   4.99),
+	   (0002, 'gProtect',  4.99),
+	   (0003, 'SCB',       9.79),
+	   (0004, 'IED',       5.39),
+	   (0005, 'uWeed',     6.08),
+	   (0006, 'Cyber HUD', 8.79),
+	   (0007, 'DWeapons',  7.49),
+	   (0008, 'McPhone',   9.99);
+
+-- Заповнення таблиці Orders
+INSERT INTO Orders
+VALUES (00000001, 'STEAM_0:0:1934673', 0003, 10, TO_DATE('01-06-2021', 'dd-mm-yyyy')),
+	   (00000002, 'STEAM_0:0:2708101', 0004, 1,  TO_DATE('01-06-2021', 'dd-mm-yyyy')),
+	   (00000003, 'STEAM_0:0:2708101', 0006, 3,  TO_DATE('01-06-2021', 'dd-mm-yyyy')),
+	   (00000004, 'STEAM_0:0:1934673', 0002, 8,  TO_DATE('04-06-2021', 'dd-mm-yyyy')),
+	   (00000005, 'STEAM_0:0:7112050', 0005, 3,  TO_DATE('04-06-2021', 'dd-mm-yyyy')),
+	   (00000006, 'STEAM_0:0:1934673', 0006, 2,  TO_DATE('09-06-2021', 'dd-mm-yyyy')),
+	   (00000007, 'STEAM_0:0:9773688', 0001, 5,  TO_DATE('09-06-2021', 'dd-mm-yyyy')),
+	   (00000008, 'STEAM_0:0:9813809', 0003, 1,  TO_DATE('16-06-2021', 'dd-mm-yyyy')),
+	   (00000009, 'STEAM_0:0:2858723', 0007, 3,  TO_DATE('19-06-2021', 'dd-mm-yyyy')),
+	   (00000010, 'STEAM_0:0:1934673', 0005, 4,  TO_DATE('20-06-2021', 'dd-mm-yyyy')),
+	   (00000011, 'STEAM_0:0:7112050', 0008, 6,  TO_DATE('25-06-2021', 'dd-mm-yyyy'));
 
 
--- Заповнення таблиці Spendings
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('5524', 'PL3528521', 250);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('5524', 'TB0128413', 88);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('2174', 'CH1558061', 150);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('4141', 'TB0128413', 30);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('6182', 'PL3223001', 20);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('5324', 'PL3223001', 456);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('5324', 'KD5233121', 43);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('6177', 'GLD092000', 39);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('965', 'GLD092000',  200);
-INSERT INTO Spendings(customer_id, product_barcode, spent_money)
-VALUES('6177', 'KD5233121', 60);
-
--- Заповнення таблиці Rating
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('KD5233121', 1999, 1);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('PL3528521', 1997, 2);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('TB0128413', 1999, 2);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('KD5233121', 1991, 3);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('GLD092000', 1997, 1);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('PL3528521', 1996, 2);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('CH1558061', 1999, 3);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('TB0128413', 1997, 4);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('GLD092000', 1998,  7);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('CH1558061', 1996, 4);
-INSERT INTO Rating(product_barcode, competition_year, product_position)
-VALUES('PL3223001', 1998, 2);
