@@ -8,15 +8,15 @@ port = '5432'
 
 
 query_1 = '''
-SELECT TRIM(product_name), SUM(spent_money) FROM customers JOIN spendings USING(customer_id) JOIN products USING(product_barcode) GROUP BY product_name ORDER BY sum DESC
+SELECT TRIM(product_name), SUM(order_quantity * product_price) FROM customers JOIN orders USING(customer_steamid) JOIN products USING(product_id) GROUP BY product_name ORDER BY sum DESC
 '''
 
 query_2 = '''
-SELECT TRIM(customer_id), SUM(100 * spent_money) / (customer_income / 12) FROM customers JOIN spendings USING(customer_id) GROUP BY customer_id
+SELECT TRIM(customer_steamid), COUNT(order_id) FROM customers LEFT JOIN orders USING(customer_steamid) GROUP BY customer_steamid
 '''
 
 query_3 = '''
-SELECT TRIM(customer_id), customer_income, SUM(spent_money) FROM customers JOIN spendings USING(customer_id) GROUP BY customer_id ORDER BY customer_income
+SELECT order_date, COUNT(*) FROM orders GROUP BY order_date ORDER BY order_date ASC
 '''
 
 con = psycopg2.connect(user=username, password=password, dbname=database, host=host, port=port)
